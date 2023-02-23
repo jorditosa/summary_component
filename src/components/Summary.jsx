@@ -1,19 +1,13 @@
 import { useEffect, useState } from 'react'
 import Button from "./Button"
+import data from '../data/data.json'
 
 function Summary() {
 
     const [ info, setInfo ] = useState([])
 
-    const getData = async () => {
-         const res = await fetch('data.json');
-         const data = await res.json()
-         setInfo(data)
-    }
-
-
     useEffect(() => {
-        getData();
+        setInfo(data);
     }, [])
 
   
