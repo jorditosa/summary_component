@@ -1,15 +1,17 @@
 import ResultBox from "./components/ResultBox"
 import Summary from "./components/Summary"
+import Footer from './components/Footer.jsx'
 
 function App() {
   return (
-    <div className="App"> 
-      <ResultBox />
-      
-      <Summary />
-
-  
-    </div>
+    <>
+      <div className="card"> 
+        <ResultBox />
+        
+        <Summary />
+      </div>
+      <Footer />
+    </>
   )
 }
 

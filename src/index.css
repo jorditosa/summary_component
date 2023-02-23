@@ -47,18 +47,16 @@ body {
     margin: 0 auto;
 }
 
-.App {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
 }
 @media (min-width: 375px) {
-    .App {
-        flex-direction: row;
+    .card {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
         margin: 0 auto;
-        width: 650px;
-        height: 400px;
+        height: 100%;
         box-shadow: 5px 5px 50px 1px var(--Light-lavender);
         border-radius: 25px;
     }
@@ -76,14 +74,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
-
 }
 
 @media (min-width: 375px) {
     .result {
         max-width: 300px;
-        padding: 25px 50px;
+        
     }
 }
 
@@ -139,7 +135,6 @@ body {
 .summary {
     margin-top: 10px;
     width: 100%;
-    flex: 1;
 }
 @media (min-width: 375px) {
     .summary {
@@ -265,4 +260,17 @@ body {
 .btn:hover {
     background: linear-gradient(180deg, var(--Light-slate-blue) 0%, var(--Light-royal-blue) 100%);
     cursor: pointer;   
+}
+
+.footer {
+    position: block;
+    margin: 10px auto;
+}
+@media (min-width: 375px) {
+    .footer {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
